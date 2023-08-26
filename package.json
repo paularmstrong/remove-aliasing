@@ -1,7 +1,23 @@
 {
-  "name": "remove-aliasing",
-  "packageManager": "yarn@3.6.3",
-  "dependencies": {
-    "jscodeshift": "^0.15.0"
-  }
+	"name": "remove-aliasing",
+	"version": "0.0.0",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/paularmstrong/remove-aliasing.git"
+	},
+	"homepage": "https://paularmstrong.dev",
+	"files": [
+		"./dist/**/*",
+		"./README.md",
+		"./LICENSE.md",
+		"./CHANGELOG.md"
+	],
+	"packageManager": "yarn@3.6.3",
+	"dependencies": {
+		"jscodeshift": "^0.15.0"
+	},
+	"engines": {
+		"node": "^18 || ^20"
+	}
 }
