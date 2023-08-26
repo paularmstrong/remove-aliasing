@@ -714,6 +714,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^11.0.0":
+  version: 11.0.0
+  resolution: "commander@npm:11.0.0"
+  checksum: 6621954e1e1d078b4991c1f5bbd9439ad37aa7768d6ab4842de1dbd4d222c8a27e1b8e62108b3a92988614af45031d5bb2a2aaa92951f4d0c934d1a1ac564bb4
+  languageName: node
+  linkType: hard
+
 "commondir@npm:^1.0.1":
   version: 1.0.1
   resolution: "commondir@npm:1.0.1"
@@ -1303,6 +1310,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prettier@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "prettier@npm:3.0.2"
+  bin:
+    prettier: bin/prettier.cjs
+  checksum: 118b59ddb6c80abe2315ab6d0f4dd1b253be5cfdb20622fa5b65bb1573dcd362e6dd3dcf2711dd3ebfe64aecf7bdc75de8a69dc2422dcd35bdde7610586b677a
+  languageName: node
+  linkType: hard
+
 "recast@npm:^0.23.1":
   version: 0.23.4
   resolution: "recast@npm:0.23.4"
@@ -1320,7 +1336,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "remove-aliasing@workspace:."
   dependencies:
+    commander: ^11.0.0
     jscodeshift: ^0.15.0
+    prettier: ^3.0.2
+  bin:
+    remove-aliasing: ./src/bin.js
   languageName: unknown
   linkType: soft
 
