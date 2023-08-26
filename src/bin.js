@@ -8,21 +8,27 @@ program
 	.argument('<directory>', 'Directory to parse and rewrite')
 	.option('--dry-run', 'Do not actually write, just see what will happen')
 	.requiredOption('-r, --root <dir>', 'Directory that serves as the root of aliased files')
-	.option('-p, --prefix <prefix>', 'Import path prefix');
+	.option('-p, --prefix <prefix>', 'Import path prefix', '')
+	.option('--parser <parser>', 'jscodeshift code parser', 'tsx');
 
 program.parse();
 
 const argv = program.opts();
 
-const paths = argv.directory;
+const paths = [path.join(process.cwd(), program.args[0])];
 
-const transformPath = path.resolve('./index.js');
+const transformPath = require.resolve('./index.js');
+console.log(transformPath);
 const options = {
-	dry: !!argv['dry-run'],
+	dry: !!argv.dryRun,
 	print: true,
-	root: options.root,
-	prefix: options.prefix,
+	root: path.join(process.cwd(), argv.root),
+	prefix: argv.prefix,
+	parser: argv.parser,
+	print: false,
 };
+
+console.log(options);
 
 async function run() {
 	const res = await jscodeshift(transformPath, paths, options);
