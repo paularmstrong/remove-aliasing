@@ -16,12 +16,14 @@ npx remove-aliasing@latest --root="src/" --prefix="@/" src/
 
 ## Options
 
-| Option      | Alias | Description                                        | Required |
-| ----------- | ----- | -------------------------------------------------- | -------- |
-| `--dry-run` |       | Do not actually write, just see what will happen   |          |
-| `--root`    | `-r`  | Directory that serves as the root of aliased files | ✅       |
-| `--prefix`  | `-p`  | Import path prefix, if any                         |          |
-| `--parser`  |       | Parser to use when reading files. Default `tsx`    |          |
+| Option        | Alias | Type      | Description                                                    | Required |
+| ------------- | ----- | --------- | -------------------------------------------------------------- | -------- |
+| `--root`      | `-r`  | `string`  | Directory that serves as the root of aliased files             | ✅       |
+| `--prefix`    | `-p`  | `string`  | Import path prefix, if any                                     |          |
+| `--parser`    |       | `string`  | Parser to use when reading files. Default `tsx`                |          |
+| `--dry-run`   |       | `boolean` | Do not actually write, just see what will happen               |          |
+| `--verbosity` | `-v`  | `number`  | Show more information about the transform process. Default `0` |          |
+| `--version`   |       |           | Show the program version                                       |          |
 
 ## License
 

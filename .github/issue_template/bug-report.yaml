@@ -1,0 +1,46 @@
+name: 🐞 Report a bug
+description: Something has unexpectedly gone wrong and needs to be fixed
+labels:
+  - bug
+  - triage
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        Okay, let’s figure out what's going on…
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      description: What was the exact command that was run?
+      placeholder: npx remove-aliasing@latest --root="src/" --prefix="@/" src/
+      render: sh
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: What was input?
+      description: Example file contents.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What was output?
+      description: Result of the file output.
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: |
+        ---
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://onerepo.tools/docs/contributing/code-of-conduct/)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
