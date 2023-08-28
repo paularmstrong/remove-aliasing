@@ -14,6 +14,20 @@ npx remove-aliasing [options] <directory>
 npx remove-aliasing@latest --root="src/" --prefix="@/" src/
 ```
 
+### Input
+
+```tsx
+import { Foo } from '~/components/Foo';
+import * as Bar from '~/api/shared/services/bar';
+```
+
+### Output
+
+```tsx
+import { Foo } from '../../components/Foo';
+import * as Bar from '../../api/shared/services/bar';
+```
+
 ## Options
 
 | Option        | Alias | Type      | Description                                                    | Required |
