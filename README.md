@@ -17,8 +17,8 @@ npx remove-aliasing@latest --root="src/" --prefix="@/" src/
 ### Input
 
 ```tsx
-import { Foo } from '~/components/Foo';
-import * as Bar from '~/api/shared/services/bar';
+import { Foo } from '@/components/Foo';
+import * as Bar from '@/api/shared/services/bar';
 ```
 
 ### Output
