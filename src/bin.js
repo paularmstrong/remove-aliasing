@@ -35,7 +35,7 @@ const options = {
 	parser: argv.parser,
 	print: false,
 	verbose: argv.verbosity,
-	ignorePattern: ['*.json', '*.css', '*.txt', '*.png', '*.jpg', "*.ttf"]
+	extensions: 'js,jsx,ts,tsx'
 };
 
 if (argv.verbosity > 0) {
