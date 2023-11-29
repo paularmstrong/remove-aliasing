@@ -35,6 +35,7 @@ const options = {
 	parser: argv.parser,
 	print: false,
 	verbose: argv.verbosity,
+	extensions: 'js,jsx,ts,tsx,mjs'
 };
 
 if (argv.verbosity > 0) {
